@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {TodolistTable} from './component/TodolistTable'
+import { Button,Input} from 'reactstrap';
 
 class App extends Component {
 
@@ -21,7 +22,7 @@ test1 :"hello narm"
     return (
       <div className="App">
        
-        <input type="text" onChange={(e)=>this.handlechange(e,"test")} value = {this.state.test}/>
+        <Input type="text" onChange={(e)=>this.handlechange(e,"test")} value = {this.state.test}/>
           {this.state.test}
           <br/>
           <input type="text" onChange={(e)=>this.handlechange(e,"test1")} value = {this.state.test1}/>

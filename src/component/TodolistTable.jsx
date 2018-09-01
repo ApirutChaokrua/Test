@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { Button } from 'react-bootstrap';
-
 export class TodolistTable extends Component {
 
 	state = {
@@ -36,13 +34,10 @@ export class TodolistTable extends Component {
 	render() {
 		return (
 			<div>
-				
 				<input type='text'
 					value={this.state.text}
 					onChange={e => this.setState({ text: e.target.value })}
-					onKeyPress={e => this.handleEnter(e)} />
-					
-				<Button bsStyle="primary" onClick={this.onAdd} > ADD </Button>
+					onKeyPress={e => this.handleEnter(e)} /><button onClick={this.onAdd} > ADD </button>
 				{
 					this.state.todolist.map((e, i) => {
 						return (
